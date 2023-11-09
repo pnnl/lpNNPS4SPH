@@ -1,19 +1,3 @@
-%%%%%%%%%%%%%%%%%Read me before using%%%%%%%%%%%%%% %
-
-By using this freeware, you are agree to the following:                
-1. you are free to copy and redistribute the material in any format;   
-2. you are free to remix, transform, and build upon the material for any purpose, even commercially;                                     
-3. you must provide the name of the creator and attribution parties, a copyright notice, a license notice, a disclaimer notice, and a link to the material [[link](https://github.com/pnnl/lpNNPS4SPH)]: https://github.com/pnnl/lpNNPS4SPH and journal paper [to be added later];                                        
-4. users are entirely at their own risk using this freeware.           
-                                                                       
-Before use, please read the License carefully:                         
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">   
-<img alt="Creative Commons License" style="border-width:0"             
-src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />    
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">   
-Creative Commons Attribution 4.0 International License</a>. 
-
-
 # Nearest Neighboring Particles Searching (NNPS) algorithms for Smoothed Particle Hydrodynamics method
 
 ## Source code 1: CPU code of all-list NNPS algorithm
@@ -93,3 +77,7 @@ To make a more accurate performance comparason of the various precisions, it is 
 - The great efficiency advantage of GPU parallel computation over CPU series computation can be highlighted by comparing the source code 2 to source code 1.
 - The great efficiency advantage of RCLL over all-list algorithm on GPUs can be evidienced by comparing source code 3 to source code 2.
 - The efficency enhancement obtained from properly managing GPU memory bandwidth utilization can be demonstrated by comparing SPH_RCLL_GPU_FP16_sort.cu to SPH_RCLL_GPU_FP16.cu.
+
+
+## License
+This project is licensed under the BSD license, see [license]  for details.
