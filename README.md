@@ -3,6 +3,11 @@ This algorithm serves as an efficient neighbors searching operator that can be e
 
 The RCLL algorithms exhibits a 1.5x efficiency improvement over the standard FP64 GPU computation, and its efficiency can be further boosted by 2.7x through optimizing GPU memory bandwidth utilization.
 
+<img width="1178" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/38bf5e34-4556-4edc-90af-1ff3d75dda09">
+
+<img width="1023" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/c3864796-a759-45c9-ab4f-80ebde344b3a">
+
+Two types of NNPS algorithms are investigated and compared. One is the all-list algorithm searching all the particles in the whole domain, and the other one is the cell link list algorithm searching only those particles locating within the adjacent cells of the target particle's cell.
 
 ## Source code
 **1: CPU code of all-list NNPS algorithm**
