@@ -87,6 +87,21 @@ To make a more accurate performance comparason of the various precisions, it is 
 - The great efficiency advantage of RCLL over all-list algorithm on GPUs can be evidienced by comparing source code 3 to source code 2.
 - The efficency enhancement obtained from properly managing GPU memory bandwidth utilization can be demonstrated by comparing SPH_RCLL_GPU_FP16_sort.cu to SPH_RCLL_GPU_FP16.cu.
 
+**Efficiency enhancement by FP16 computation**
+
+![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/6df5209a-09da-4002-9b6a-eb747ac26a54)
+(a) Run time comparison of all-list NNPS algorithm under FP64 vs FP32 vs FP16. (b) Run-time ratio of SPH using low FP precisions in all-list NNPS algorithm to that using high precision FP64. 
+
+![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/e560bdea-a651-40ad-8fe0-ea25ff4e7944)
+(a) Run time comparison of RCLL algorithm under FP64 vs FP32 vs FP16. (b) Run-time ratio of SPH using low float precisions in RCLL algorithm to that using FP64.
+
+![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/e5b71e46-ca34-496e-825c-ad4dbc3b1d22)
+Comparison of Cache and global memory throughput before optimization (unsorted) and after optimization (sorted).
+
+![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/31bb6212-d25f-482a-af1f-bb515a2cc10d)
+Comparison of RCLL algorithm’s run times on NVIDIA A100 vs AMD MI250 when 1 million particles are employed in simulation.
+
+
 
 ## Authors
 Zirui Mao (PNNL), Ang Li (PNNL), Xinyi Li (PNNL and Utah)
