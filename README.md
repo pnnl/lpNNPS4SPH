@@ -89,16 +89,20 @@ To make a more accurate performance comparason of the various precisions, it is 
 
 **Efficiency enhancement by FP16 computation**
 
-![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/6df5209a-09da-4002-9b6a-eb747ac26a54)
+<img width="1165" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/c1dbc518-61ea-4e0e-b0bc-d90b42e0efdc">
+
 (a) Run time comparison of all-list NNPS algorithm under FP64 vs FP32 vs FP16. (b) Run-time ratio of SPH using low FP precisions in all-list NNPS algorithm to that using high precision FP64. 
 
-![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/e560bdea-a651-40ad-8fe0-ea25ff4e7944)
+<img width="1159" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/4d4d5a86-d7a3-420c-bf17-37fc3f0c2fe7">
+
 (a) Run time comparison of RCLL algorithm under FP64 vs FP32 vs FP16. (b) Run-time ratio of SPH using low float precisions in RCLL algorithm to that using FP64.
 
-![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/e5b71e46-ca34-496e-825c-ad4dbc3b1d22)
+<img width="831" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/3f77c629-84bf-4022-b1b2-beafa25735dc">
+
 Comparison of Cache and global memory throughput before optimization (unsorted) and after optimization (sorted).
 
-![image](https://github.com/pnnl/lpNNPS4SPH/assets/149202425/31bb6212-d25f-482a-af1f-bb515a2cc10d)
+<img width="769" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/9447e26c-8df1-4b27-ba75-f4f780c83279">
+
 Comparison of RCLL algorithm’s run times on NVIDIA A100 vs AMD MI250 when 1 million particles are employed in simulation.
 
 
