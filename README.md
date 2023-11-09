@@ -14,7 +14,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 Creative Commons Attribution 4.0 International License</a>. 
 
 
-# Source code of Nearest Neighboring Particles Searching (NNPS) algorithms for Smoothed Particle Hydrodynamics method
+# Nearest Neighboring Particles Searching (NNPS) algorithms for Smoothed Particle Hydrodynamics method
 
 ## Source code 1: CPU code of all-list NNPS algorithm
 All-list NNPS algorithm searches neighbors within a certain searching radius from a target particle by explicitly checking all the particles in domain.
