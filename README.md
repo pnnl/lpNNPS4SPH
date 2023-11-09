@@ -5,7 +5,7 @@ The RCLL algorithms exhibits a 1.5x efficiency improvement over the standard FP6
 
 <img width="1178" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/38bf5e34-4556-4edc-90af-1ff3d75dda09">
 
-<img width="1023" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/c3864796-a759-45c9-ab4f-80ebde344b3a">
+<img width="800" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/c3864796-a759-45c9-ab4f-80ebde344b3a">
 
 Two types of NNPS algorithms are investigated and compared. One is the all-list algorithm searching all the particles in the whole domain, and the other one is the cell link list algorithm searching only those particles locating within the adjacent cells of the target particle's cell.
 
@@ -102,11 +102,11 @@ To make a more accurate performance comparason of the various precisions, it is 
 
 (a) Run time comparison of RCLL algorithm under FP64 vs FP32 vs FP16. (b) Run-time ratio of SPH using low float precisions in RCLL algorithm to that using FP64.
 
-<img width="831" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/3f77c629-84bf-4022-b1b2-beafa25735dc">
+<img width="500" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/3f77c629-84bf-4022-b1b2-beafa25735dc">
 
 Comparison of Cache and global memory throughput before optimization (unsorted) and after optimization (sorted).
 
-<img width="769" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/9447e26c-8df1-4b27-ba75-f4f780c83279">
+<img width="500" alt="image" src="https://github.com/pnnl/lpNNPS4SPH/assets/149202425/9447e26c-8df1-4b27-ba75-f4f780c83279">
 
 Comparison of RCLL algorithm’s run times on NVIDIA A100 vs AMD MI250 when 1 million particles are employed in simulation.
 
