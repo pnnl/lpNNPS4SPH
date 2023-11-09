@@ -80,4 +80,4 @@ To make a more accurate performance comparason of the various precisions, it is 
 
 
 ## License
-This project is licensed under the BSD license, see [license]  for details.
+This project is licensed under the BSD license, see [license](https://github.com/pnnl/lpNNPS4SPH/blob/master/LICENSE.txt)  for details.
