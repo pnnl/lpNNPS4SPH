@@ -6,6 +6,7 @@ The RCLL algorithms exhibits a 1.5x efficiency improvement over the standard FP6
 
 ## Source code
 **1: CPU code of all-list NNPS algorithm**
+
 All-list NNPS algorithm searches neighbors within a certain searching radius from a target particle by explicitly checking all the particles in domain.
 Two independent source codes, one takes float-point-64 or FP64 computation while the other one takes FP32.
 - AllList_CPU_FP64.f90
@@ -20,6 +21,7 @@ Note that, the '*' above can be chosen as '64' or '32' to test the two independe
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
 **2: GPU code of all-list NNPS algorithm**
+
 Three independent source codes taking FP64, FP32, and FP16.
 - AllList_GPU_FP64.cu
 - AllList_GPU_FP32.cu
@@ -36,6 +38,7 @@ If memory segmentation fault is reported, try to resovle it by seting unlimited 
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
 **3: GPU code of Relative Coordinate-based Link List (RCLL) algorithm**
+
 RCLL algorithm searches neighbors within a certain searching radius from a target particle by checking only surrounding particles. Particles are assigned into background cells. Only those particles locating in the same or adjecent cells are subjective to be checked. To achieve the best accuracy of FP16, the coordinates of particles are expressed in terms of the relative coordinate within the cell and the cell center's index.
 
 Three independent source codes taking FP64, FP32, and FP16.
@@ -54,6 +57,7 @@ If memory segmentation fault is reported, try to resovle it by seting unlimited 
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
 **4: GPU code of RCLL algorithm applied to gradient approximation with SPH method**
+
 The SPH method approximates the gradient of a polynomial function based on the neighbors list obtained from RCLL algorithm.
 Four independent source codes taking FP64, FP32, and FP16.
 - SPH_RCLL_GPU_FP64.cu
