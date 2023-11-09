@@ -1,6 +1,11 @@
 # Nearest Neighboring Particles Searching (NNPS) algorithms for Smoothed Particle Hydrodynamics method
+This algorithm serves as an efficient neighbors searching operator that can be easily integrated into the Smoohthed Particle Hydrodynamics (SPH) method. This algorithm is designed to utilize low-precision float-point 16 computation on GPU for efficiency purpose. To maintain the NNPS accuracy while using the low-precision FP16 computation, a cell-based relative coordinate link list (RCLL) algorithm is developed.
 
-## Source code 1: CPU code of all-list NNPS algorithm
+The RCLL algorithms exhibits a 1.5x efficiency improvement over the standard FP64 GPU computation, and its efficiency can be further boosted by 2.7x through optimizing GPU memory bandwidth utilization.
+
+
+## Source code
+**1: CPU code of all-list NNPS algorithm**
 All-list NNPS algorithm searches neighbors within a certain searching radius from a target particle by explicitly checking all the particles in domain.
 Two independent source codes, one takes float-point-64 or FP64 computation while the other one takes FP32.
 - AllList_CPU_FP64.f90
@@ -14,7 +19,7 @@ Note that, the '*' above can be chosen as '64' or '32' to test the two independe
 
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
-## Source code 2: GPU code of all-list NNPS algorithm
+**2: GPU code of all-list NNPS algorithm**
 Three independent source codes taking FP64, FP32, and FP16.
 - AllList_GPU_FP64.cu
 - AllList_GPU_FP32.cu
@@ -30,7 +35,7 @@ If memory segmentation fault is reported, try to resovle it by seting unlimited 
 
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
-## Source code 3: GPU code of Relative Coordinate-based Link List (RCLL) algorithm
+**3: GPU code of Relative Coordinate-based Link List (RCLL) algorithm**
 RCLL algorithm searches neighbors within a certain searching radius from a target particle by checking only surrounding particles. Particles are assigned into background cells. Only those particles locating in the same or adjecent cells are subjective to be checked. To achieve the best accuracy of FP16, the coordinates of particles are expressed in terms of the relative coordinate within the cell and the cell center's index.
 
 Three independent source codes taking FP64, FP32, and FP16.
@@ -48,7 +53,7 @@ If memory segmentation fault is reported, try to resovle it by seting unlimited 
 
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
-## Source code 4: GPU code of RCLL algorithm applied to gradient approximation with SPH method
+**4: GPU code of RCLL algorithm applied to gradient approximation with SPH method**
 The SPH method approximates the gradient of a polynomial function based on the neighbors list obtained from RCLL algorithm.
 Four independent source codes taking FP64, FP32, and FP16.
 - SPH_RCLL_GPU_FP64.cu
@@ -72,7 +77,7 @@ If memory segmentation fault is reported, try to resovle it by seting unlimited 
 
 To make a more accurate performance comparason of the various precisions, it is suggested to use the exact same particles distribution stored in 'coordinate*.txt', rather than generting particles randomly.
 
-# Performance comparison of different versions of code
+## Performance comparison of different versions of code
 - The efficiency advantage of lower precision computation can be demonstrated by comparing *_FP16.cu to *_FP32.cu and *_FP64.cu.
 - The great efficiency advantage of GPU parallel computation over CPU series computation can be highlighted by comparing the source code 2 to source code 1.
 - The great efficiency advantage of RCLL over all-list algorithm on GPUs can be evidienced by comparing source code 3 to source code 2.
