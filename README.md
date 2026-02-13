@@ -116,7 +116,7 @@ Comparison of RCLL algorithm’s run times on NVIDIA A100 vs AMD MI250 when 1 mi
 Zirui Mao (PNNL), Ang Li (PNNL), Xinyi Li (PNNL and Utah)
 
 ## Citation
-Please cite our [Paper](https://arxiv.org/submit/5226355/preview).
+Please cite our [Paper](https://doi.org/10.1016/j.enganabound.2024.01.020).
 
 ## License
 This project is licensed under the BSD license, see [license](https://github.com/pnnl/lpNNPS4SPH/blob/master/LICENSE.txt)  for details.
